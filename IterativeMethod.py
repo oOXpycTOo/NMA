@@ -1,3 +1,6 @@
+from linalg_utils import is_symmetric, is_positive_defined, calculate_discrepancy
+import numpy as np
+
 class IterativeMethod:
     def __init__(self):
         pass
@@ -12,7 +15,7 @@ class IterativeMethod:
     def is_converge(self, B):
         if np.linalg.norm(B) < 1:
             return "Method converges (||B|| is equal to {})".format(np.linalg.norm(B))
-        if np.max(np.abs(np.linalg.eigvalsh(B))):
+        if np.max(np.abs(np.linalg.eigvals(B))) < 1:
             return "Method converges (max eigenvalue is: {})".format(np.max(np.abs(np.linalg.eigvalsh(B))))
         return "Method doesn't converge"
     

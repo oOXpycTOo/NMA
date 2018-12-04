@@ -1,4 +1,5 @@
 from linalg_utils import back_substitution
+import numpy as np
 
 def cholessky_decomposition(A):
     S = np.zeros_like(A)

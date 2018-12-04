@@ -1,4 +1,5 @@
 from linalg_utils import back_substitution
+import numpy as np
 
 class HausholderMethod:
     def __init__(self, A, b):
