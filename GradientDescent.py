@@ -8,7 +8,7 @@ class GradientDescent:
         A - matrix A (coefficients)
         b - free term
         x0 - initial guess
-        eps - disired accuracy"""
+        eps - desired accuracy"""
         x_next = np.copy(x0)
         x_prev = np.copy(x0)
         r = calculate_discrepancy(A, b, x0)
